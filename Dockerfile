@@ -2,9 +2,9 @@ FROM sameersbn/squid:latest
 MAINTAINER derk@muenchhausen.de
 
 RUN apt-get update \
+ && apt-get install -y --no-install-recommends apt-utils \
  && apt-get install -y squidguard \ 
- && apt-get install -y apache2 \
- && apt-get install -y --no-install-recommends apt-utils
+ && apt-get install -y apache2 
 
 RUN echo 'AddType application/x-ns-proxy-autoconfig .dat' >> /etc/apache2/httpd.conf
 ADD wpad.dat /var/www/html/wpad.dat
