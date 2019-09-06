@@ -23,7 +23,7 @@ RUN apt-get update \
 
 #ADD startSquidGuard /startSquidGuard
 #RUN chmod a+x /startSquidGuard
-RUN sudo systemctl start apache2
+
 #EXPOSE 3128 80
 EXPOSE 80
 #VOLUME ["/var/log/squid3"]
