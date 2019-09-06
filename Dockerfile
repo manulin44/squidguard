@@ -1,5 +1,5 @@
 FROM sameersbn/squid:latest
-MAINTAINER derk@muenchhausen.de
+MAINTAINER lucas4paz@gmail.com
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends apt-utils \
