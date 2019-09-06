@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM debian
 MAINTAINER lucas4paz@gmail.com
 
 RUN apt-get update \
