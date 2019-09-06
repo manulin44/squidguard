@@ -1,7 +1,8 @@
-FROM sameersbn/squid:latest
+FROM ubuntu:14.04
 MAINTAINER lucas4paz@gmail.com
 
 RUN apt-get update \
+ && apt-get install -y squid3 \
  && apt-get install -y squidguard \ 
  && apt-get install -y apache2 
 
