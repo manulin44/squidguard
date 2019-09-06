@@ -2,7 +2,6 @@ FROM sameersbn/squid:latest
 MAINTAINER lucas4paz@gmail.com
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends apt-utils \
  && apt-get install -y squidguard \ 
  && apt-get install -y apache2 
 
@@ -12,7 +11,7 @@ ADD wpad.dat /var/www/html/wpad.dat
 ADD wpad.dat /var/www/html/wpat.dat
 ADD block.html /var/www/html/block.html
 
-#RUN echo "redirect_program /usr/bin/squidGuard -c /etc/squidguard/squidGuard.conf" >> /etc/squid3/squid.conf
+RUN echo "redirect_program /usr/bin/squidGuard -c /etc/squidguard/squidGuard.conf" >> /etc/squid3/squid.conf
 
 RUN rm /etc/squidguard/squidGuard.conf
 ADD sample-config-blacklist /sample-config-blacklist
