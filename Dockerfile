@@ -25,6 +25,7 @@ RUN apt-get update \
 #RUN chmod a+x /startSquidGuard
 
 #EXPOSE 3128 80
+EXPOSE 80
 #VOLUME ["/var/log/squid3"]
 #VOLUME ["/custom-config"]
 
