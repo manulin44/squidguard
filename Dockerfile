@@ -4,7 +4,7 @@ MAINTAINER lucas4paz@gmail.com
 RUN apt-get update \
 # && apt-get install -y squid3 \
  && apt-get install -y squidguard \
- && apt-get install -y krb5-kdc krb5-config libpam-krb5 krb5-user \
+ #&& apt-get install -y krb5-kdc krb5-config libpam-krb5 krb5-user \
  && apt-get install -y apache2 
 
 RUN echo 'AddType application/x-ns-proxy-autoconfig .dat' >> /etc/apache2/httpd.conf
@@ -25,7 +25,7 @@ RUN mkdir /custom-config
 ADD startSquidGuard /startSquidGuard
 RUN chmod a+x /startSquidGuard
 #RUN systemctl start apache2
-EXPOSE 3128 
+EXPOSE 3128 80
 
 VOLUME ["/var/log/squid3"]
 VOLUME ["/custom-config"]
