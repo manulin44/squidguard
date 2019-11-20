@@ -1,5 +1,5 @@
 FROM sameersbn/squid:3.3.8-1
-MAINTAINER lucas4paz@gmail.com
+MAINTAINER manulin.github@gmail.com
 
 RUN apt-get update \
 # && apt-get install -y squid3 \
